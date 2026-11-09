@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu 1º Site</title>
+</head>
+<body>
+    <l1>Olá, mundo!</l1>
+    <p>Meu nome é {{ nome }}.</p>
+    <p>Eu tenho {{ idade }} anos e minha altura é {{ altura }} metros.</p>
+    <p>Eu sou mãe/pai de:</p>
+    <ul>
+        {% for pet in pets %}
+            <li>{{ pet }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
