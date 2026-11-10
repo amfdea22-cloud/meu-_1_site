@@ -1,19 +1,22 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu 1º Site</title>
-</head>
-<body>
-    <l1>Olá, mundo!</l1>
-    <p>Meu nome é {{ nome }}.</p>
-    <p>Eu tenho {{ idade }} anos e minha altura é {{ altura }} metros.</p>
-    <p>Eu sou mãe/pai de:</p>
+{% extends "base.html" %}
+
+{% block conteudo %}
+   <h2 style="color: blue;">Sejam Bem-vindos!</h2>
+    <p>Olá, meu nome é {{ nome }} e eu moro em {{ cidade }}.</p>
+    <h3>Meus cursos favoritos são:</h3>
     <ul>
-        {% for pet in pets %}
-            <li>{{ pet }}</li>
+        {% for curso in cursos %}
+            <li>{{ curso }}</li>
         {% endfor %}
     </ul>
-</body>
-</html>
+    <h3>Meus hobbies incluem:</h3>
+    <ul>
+        {% for hobby in hobbies %}
+            <li>{{ hobby }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+
+   
+

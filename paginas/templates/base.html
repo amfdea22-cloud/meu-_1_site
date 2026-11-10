@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao meu site!</h1>
+        <nav>          
+            <a href="/">Início</a> |
+            <a href="/sobre/">Sobre</a>  |
+            <a href="/contato/">Contato</a>
+           
+        </nav>
+
+    </header>
+
+    <main>
+        {% block conteudo %}
+        {% endblock %}
+    </main>
+
+    <footer>
+       <i><b><p>Feito por Andréa França. Todos os direitos reservados &copy; 2026</p></i></b>
+    </footer>
+
+</body>
+</html>
