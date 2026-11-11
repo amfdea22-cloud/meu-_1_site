@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block conteudo %}
+   
+<h1>Meus Projetos</h1>
+    <p>Esta é a página de projetos.</p>
+
+    <ul>
+
+        {% for projetos in projetos %}
+            <li class = "cartao">{{ projetos }}</li>
+        {% endfor %}
+       
+
+    </ul>   
+{% endblock %}

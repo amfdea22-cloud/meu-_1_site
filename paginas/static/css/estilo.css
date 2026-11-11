@@ -1,0 +1,39 @@
+ 
+        body { font-family: Arial; margin: 20px; }
+        header { background: #073599;
+                color: white; padding: 20px; }
+        nav a { color: #ffffff; }
+        footer { color: rgba(1, 42, 70, 0.897); margin-top: 80px; }
+
+        .cartao {
+            list-style-type: none;
+            background-color: #4aa6f1;
+            border: 3px solid #3e8aee;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        main {
+            margin-left: 1px;
+            margin-right: 1250px;
+            text-align: left;
+
+        }
+        nav a {
+            margin-right: 10px;
+            background-color: #03176e;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #0b2ef3;
+            color: rgb(11, 89, 179);
+            text-decoration: underline;
+        }
+
+    
