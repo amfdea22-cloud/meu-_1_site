@@ -6,13 +6,13 @@
 
     <ul>
 
-        {% for projetos in projetos %}
+        {% for item in projeto %}
             <li class = "cartao">
-                <h2>{{ projetos.titulo }}</h2>
-                <p><strong>Ano:</strong> {{ projetos.ano }}</p>
-                <p><strong>Gênero:</strong> {{ projetos.genero }}</p>
-                <p><strong>Nota:</strong> {{ projetos.nota }}</p>
-                <p><strong>Autor:</strong> {{ projetos.autor }}</p>
+                <h2>{{ item.titulo }}</h2>
+                <p><strong>Ano:</strong> {{ item.ano }}</p>
+                <p><strong>Gênero:</strong> {{ item.genero }}</p>
+                <p><strong>Nota:</strong> {{ item.nota }}</p>
+                <p><strong>Autor:</strong> {{ item.autor }}</p>
             </li>
         {% endfor %}
        

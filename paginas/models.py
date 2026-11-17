@@ -10,7 +10,7 @@ class filme(models.Model):
     def __str__(self):
         return self.titulo
 
-class projetos(models.Model):
+class projeto(models.Model):
     nome = models.CharField(max_length=200)
     descricao = models.TextField()
     data_criacao = models.DateField(auto_now_add=True)
