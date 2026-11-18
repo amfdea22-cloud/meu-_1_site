@@ -23,5 +23,8 @@ urlpatterns = [
     path('', views.inicio, name='inicio'),
     path('sobre/', views.sobre, name='sobre'),
     path('contato/', views.contato, name='contato'),
-    path('projetos/', views.projetos, name='projetos'),
-]
+    path('projetos/', views.lista_projetos, name='projetos'),
+    path('filme/', views.lista_filmes, name='filme'),
+    path('categoria/', views.listar_categoria, name='categoria'),
+]  # <--- Colchete de fechamento adicionado aqui
+

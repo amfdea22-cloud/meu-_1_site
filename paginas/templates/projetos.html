@@ -1,21 +1,19 @@
 {% extends "base.html" %}
+
 {% block conteudo %}
-   
 <h1>Meus Projetos</h1>
-    <p>Esta é a página de projetos.</p>
+<p>Esta é a página de projetos.</p>
 
-    <ul>
-
-        {% for item in projeto %}
-            <li class = "cartao">
-                <h2>{{ item.titulo }}</h2>
-                <p><strong>Ano:</strong> {{ item.ano }}</p>
-                <p><strong>Gênero:</strong> {{ item.genero }}</p>
-                <p><strong>Nota:</strong> {{ item.nota }}</p>
-                <p><strong>Autor:</strong> {{ item.autor }}</p>
-            </li>
-        {% endfor %}
-       
-
-    </ul>   
+<ul>
+    {% for projeto in projetos %}
+        <li class="cartao">
+            <h2>{{ projeto.nome }}</h2>
+            <p><strong>Descrição:</strong> {{ projeto.descricao }}</p>
+            <p><strong>Data:</strong> {{ projeto.data_criacao }}</p>
+            <p><strong>Categoria:</strong> {{ projeto.categoria }}</p>
+        </li>
+    {% empty %}
+        <p>Nenhum projeto cadastrado no momento.</p>
+    {% endfor %}
+</ul>   
 {% endblock %}

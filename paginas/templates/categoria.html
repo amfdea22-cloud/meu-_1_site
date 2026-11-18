@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+<h1>Categorias</h1>
+<p>Esta é a página de Categorias.</p>
+
+<ul>
+    {% for categoria in categorias %}
+        <li class="cartao">
+            <h2>{{ categoria.nome }}</h2>
+            
+            <!-- Sub-lista para exibir os projetos desta categoria -->
+            <h3>Projetos nesta categoria:</h3>
+            <ul>
+                {% for projeto in categoria.projeto_set.all %}
+                    <li>
+                        <strong>{{ projeto.nome }}</strong> - {{ projeto.descricao }} 
+                        <br><small>Data: {{ projeto.data_criacao }}</small>
+                    </li>
+                {% empty %}
+                    <li><em>Nenhum projeto cadastrado nesta categoria.</em></li>
+                {% endfor %}
+            </ul>
+
+        </li>
+    {% empty %}
+        <p>Nenhuma categoria cadastrada no momento.</p>
+    {% endfor %}
+</ul>   
+{% endblock %}

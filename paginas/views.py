@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import  filme
-from .models import projeto
+from .models import Filme, Projeto, Categoria  # Importando com letra maiúscula (boa prática)
 
 
 def inicio(request):
@@ -19,12 +18,20 @@ def sobre(request):
 def contato(request):
     return render(request, 'contato.html')
 
-def projetos(request):
+def lista_projetos(request):
     contexto = {
-        'projetos': projeto.objects.all(),
-        'filmes': filme.objects.all(),
+        'projetos': Projeto.objects.all(),
     }
     return render(request, 'projetos.html', contexto)
 
+def lista_filmes(request):
+    contexto = {
+        'filmes': Filme.objects.all(),
+    }
+    return render(request, 'filme.html', contexto)
 
-    
+def listar_categoria(request):
+    contexto = {
+        'categorias': Categoria.objects.all(),
+    }
+    return render(request, 'categoria.html', contexto)  # Padronizado para o plural
