@@ -1,6 +1,8 @@
 from django.contrib import admin
 from .models import Filme, Categoria, Projeto
 
+
+
 class FilmeAdmin(admin.ModelAdmin):
     list_display = ('titulo', 'ano', 'genero', 'nota', 'autor')
     list_filter = ('genero', 'ano')

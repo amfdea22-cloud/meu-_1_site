@@ -4,16 +4,19 @@
 <h1>Meus Projetos</h1>
 <p>Esta é a página de projetos.</p>
 
+<a href="/projetos/novo/">+ Novo projeto</a>
+
+
 <ul>
     {% for projeto in projetos %}
         <li class="cartao">
             <h2>{{ projeto.nome }}</h2>
             <p><strong>Descrição:</strong> {{ projeto.descricao }}</p>
             <p><strong>Data:</strong> {{ projeto.data_criacao }}</p>
-            <p><strong>Categoria:</strong> {{ projeto.categoria }}</p>
+            <p><strong>Categoria:</strong> {{ projeto.categoria|default:"Sem categoria" }}</p>
         </li>
     {% empty %}
-        <p>Nenhum projeto cadastrado no momento.</p>
+        <li>Nenhum projeto cadastrado no momento.</li>
     {% endfor %}
-</ul>   
+</ul>
 {% endblock %}
