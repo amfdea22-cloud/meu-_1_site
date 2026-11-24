@@ -10,7 +10,7 @@ def inicio(request):
         'cursos': ['Python', 'Django', 'HTML', 'CSS'],
         'hobbies': ['Ler', 'Estudar', 'Comer'],
     }
-    return render(request, 'inicio.html', contexto)
+    return render(request, 'inicio.html', 'sobre.html' contexto)
 
 
 def sobre(request):
