@@ -2,19 +2,20 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Filme, Projeto, Categoria
 from .forms import ProjetoForm, CategoriaForm
 
-
-def inicio(request):
-    contexto = {
+contexto = {
         'nome': 'Andréa França',
         'cidade': 'Recife',
         'cursos': ['Python', 'Django', 'HTML', 'CSS'],
-        'hobbies': ['Ler', 'Estudar', 'Comer'],
-    }
-    return render(request, 'inicio.html', 'sobre.html' contexto)
+        'hobbies': ['Ler', 'Estudar', 'Comer'], 
+}
+
+
+def inicio(request):
+    return render(request, 'inicio.html', contexto)
 
 
 def sobre(request):
-    return render(request, 'sobre.html')
+    return render(request, 'sobre.html', contexto)
 
 
 def contato(request):
