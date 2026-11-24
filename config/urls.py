@@ -27,6 +27,9 @@ urlpatterns = [
     path('filme/', views.lista_filmes, name='filme'),
     path('categoria/', views.listar_categoria, name='categoria'),
     path('projetos/novo/', views.novo_projeto),
+    path('projetos/<int:id>/', views.detalhe_projeto),
     path('categoria/novo/', views.nova_categoria),
+    path('projetos/<int:id>/editar/', views.editar_projeto),
+    path('projetos/<int:id>/excluir/', views.excluir_projeto),
 ]  # <--- Colchete de fechamento adicionado aqui
 

@@ -24,3 +24,4 @@ class ProjetoAdmin(admin.ModelAdmin):
     search_fields = ('nome', 'descricao')
 
 admin.site.register(Projeto, ProjetoAdmin)
+

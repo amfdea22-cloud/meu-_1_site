@@ -1,22 +1,17 @@
 {% extends "base.html" %}
-
 {% block conteudo %}
-<h1>Meus Projetos</h1>
-<p>Esta é a página de projetos.</p>
+<h2>Meus Projetos</h2>
+<p>
+    Estes são os projetos que fiz. O <span class="destaque">mais recente</span> é o site!</p>
+<ul>
+    {% for item in projetos%}
+    <li class = "cartao"> 
+        <a href ="/projetos/{{item.id}}/">{{item.nome}}</a>
+    </li>
+    {% endfor %}
+</ul>
 
 <a href="/projetos/novo/">+ Novo projeto</a>
 
 
-<ul>
-    {% for projeto in projetos %}
-        <li class="cartao">
-            <h2>{{ projeto.nome }}</h2>
-            <p><strong>Descrição:</strong> {{ projeto.descricao }}</p>
-            <p><strong>Data:</strong> {{ projeto.data_criacao }}</p>
-            <p><strong>Categoria:</strong> {{ projeto.categoria|default:"Sem categoria" }}</p>
-        </li>
-    {% empty %}
-        <li>Nenhum projeto cadastrado no momento.</li>
-    {% endfor %}
-</ul>
 {% endblock %}
